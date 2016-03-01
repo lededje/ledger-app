@@ -1,0 +1,26 @@
+.root-navigation {
+  width: 70px;
+  background: #283544;
+
+	&__links {
+		text-align: center;
+		margin-top: 50px;
+	}
+
+	&__link {
+		color: #8696A4;
+		font-size: 20px;
+		display: block;
+		transition: color, 100ms;
+		
+		& i {
+			line-height: 55px;
+		}
+
+		&:hover, &--active {
+			color: #fff;
+		}
+
+	}
+
+}

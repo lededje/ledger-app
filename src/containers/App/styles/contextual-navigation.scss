@@ -1,0 +1,37 @@
+.contextual-navigation {
+  background: #1074AE;
+  height: 50px;
+  padding: 0 10px;
+	
+	display: flex;
+	align-items: center;
+
+	&__seperator {
+			height: 5px;
+			width: 5px;
+			background: #0D6091;
+			margin-right: 10px;
+	}
+
+	&__link {
+		font-size: 12px;
+		font-weight: bold;
+		color: #fff;
+		line-height: 30px;
+		border-radius: 15px;
+		padding: 0 10px;
+		margin-right: 10px;
+
+		transition: background-color, 100ms;
+
+		&:hover {
+			color: #fff;
+			text-decoration: none;
+		}
+
+		&:hover, &--active {
+			background: #0F6095;
+		}
+	}
+
+}

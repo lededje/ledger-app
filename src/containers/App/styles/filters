@@ -1,0 +1,10 @@
+.filters {
+	width: 170px;
+	background: #F8FAFB;
+	border-right: 1px solid #DCE5EB;
+	
+}
+
+.select-box {
+
+}
