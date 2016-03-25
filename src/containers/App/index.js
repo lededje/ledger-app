@@ -5,6 +5,7 @@ import './styles/app.scss';
 
 import Navigation from 'components/Navigation'
 import ContextualNavigation from 'components/ContextualNavigation'
+import ContextualTitle from 'components/ContextualTitle'
 import Filters from 'components/Filters'
 import Results from 'components/Filters'
 
@@ -15,13 +16,17 @@ export class App extends Component {
 
   render() {
     return (
-      <section className="wrapper">
+      <section className="wrapper wrapper--horizontal wrapper__root">
         <Navigation />
-        <div className="main" >
+        <div className="main wrapper wrapper--vertical wrapper__full-flex" >
           <ContextualNavigation />
-          <div>
-            <Filters />
-            <Results />
+          <div className="wrapper wrapper__full-flex">
+            <div className="contextual-side-navigation">
+              <Filters />
+            </div>
+            <div className="main-detail wrapper__full-flex">
+              <ContextualTitle />
+            </div>
           </div>
         </div>
       </section>

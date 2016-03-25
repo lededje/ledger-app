@@ -1,9 +1,36 @@
-.wrapper {
-  display: flex;
-  flex-direction: row;
-  height: 100%;
+body {
+	background: #F0F4F7;
 }
 
-.main {
-  flex: 1;
+
+.wrapper {
+	display:flex;
+	justify-content: flex-start;
+	align-content: stretch;
+	align-items: stretch;
+	flex-wrap: no-wrap;
+}
+
+.wrapper__root {
+	height: 100%;
+}
+
+.wrapper--horizontal {
+	flex-direction: row;
+}
+
+.wrapper--vertical {
+	flex-direction: column;
+}
+
+.wrapper__full-flex {
+	flex: 1 0 auto;
+}
+
+.wrapper__shrink_flex {
+	flex: 0 1 auto;
+}
+
+.wrapper__static_flex {
+	flex-shrink: 0
 }
