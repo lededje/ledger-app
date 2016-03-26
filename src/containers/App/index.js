@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+
+import * as transactionActions from 'actions/transaction';
 
 /* global styles for app */
 import './styles/app.scss';
@@ -7,7 +11,12 @@ import Navigation from 'components/Navigation'
 import ContextualNavigation from 'components/ContextualNavigation'
 import ContextualTitle from 'components/ContextualTitle'
 import Filters from 'components/Filters'
-import Results from 'components/Filters'
+import TransactionList from 'components/TransactionList'
+
+@connect(
+  state => state.transactions,
+  dispatch => bindActionCreators(transactionActions, dispatch)
+)
 
 export class App extends Component {
   static propTypes = {
@@ -26,6 +35,9 @@ export class App extends Component {
             </div>
             <div className="main-detail wrapper__full-flex">
               <ContextualTitle />
+              <div className="container">
+                <TransactionList {...this.props} />
+              </div>
             </div>
           </div>
         </div>

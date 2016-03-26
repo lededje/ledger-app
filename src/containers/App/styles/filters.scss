@@ -4,7 +4,7 @@
 	}
 
 	&__attributes {
-		margin: 10px;
+		margin: 15px 10px 10px;
 	}
 
 	&__list {
@@ -23,6 +23,9 @@
 }
 
 .filter {
+
+	padding: 3px 0;
+
 	&__label {
 		font-size: 11px;
 		color: #455A64;
@@ -32,6 +35,6 @@
 		display: inline-block;
 	}
 	&__checkbox {
-		float: left;
+		// float: left;
 	}
 }

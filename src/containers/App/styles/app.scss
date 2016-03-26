@@ -1,8 +1,8 @@
 /* global styles */
 
-@import 'fonts/font-awesome';
-
 @import 'normalize';
+
+@import 'fonts/font-awesome';
 
 @import 'screens';
 @import 'wrappers';
@@ -12,5 +12,6 @@
 @import 'root-navigation';
 @import 'contextual-navigation';
 @import 'contextual-side-navigation';
+@import 'transaction-list';
 @import 'contextual-title';
 @import 'filters';
