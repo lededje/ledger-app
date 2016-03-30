@@ -25,19 +25,17 @@ export class App extends Component {
 
   render() {
     return (
-      <section className="wrapper wrapper--horizontal wrapper__root">
+      <section className="layout--horizontal flex">
         <Navigation />
-        <div className="main wrapper wrapper--vertical wrapper__full-flex" >
-          <ContextualNavigation />
-          <div className="wrapper wrapper__full-flex">
-            <div className="contextual-side-navigation">
+        <div className="main layout--vertical flex" >
+          <ContextualNavigation/>
+          <div className="layout--horizontal flex">
+            <div className="contextual-side-navigation flex--static">
               <Filters />
             </div>
-            <div className="main-detail wrapper__full-flex">
-              <ContextualTitle />
-              <div className="container">
-                <TransactionList {...this.props} />
-              </div>
+            <div className="main-detail layout--vertical flex">
+              <ContextualTitle {...this.props} />
+              <TransactionList {...this.props} />
             </div>
           </div>
         </div>

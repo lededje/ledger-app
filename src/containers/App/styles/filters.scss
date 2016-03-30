@@ -24,7 +24,9 @@
 
 .filter {
 
+	display: flex;
 	padding: 3px 0;
+	flex-wrap: wrap;
 
 	&__label {
 		font-size: 11px;
@@ -33,8 +35,35 @@
 		text-transform: uppercase;
 		margin-left: 7px;
 		display: inline-block;
+		order: 2;
+
 	}
 	&__checkbox {
-		// float: left;
+		order: 1;
+	}
+
+	&__controls {
+		order: 3;
+		width: 100%;
+		background: #eff3f5;
+		padding: 15px;
+	}
+
+	&__control {
+		display: flex;
+		font-size: 13px;
+		line-height: 18px;
+		margin: 5px 0;
+	}
+
+	&__control-label {
+		color: #37474F;
+		order: 2;
+		font-weight: 300;
+	}
+
+	&__control-radio {
+		order: 1;
+		margin-right: 8px;
 	}
 }

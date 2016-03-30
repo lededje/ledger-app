@@ -1,15 +1,40 @@
 .transaction-list {
-	margin-top: 35px;
-	width: 100%;
-	border-collapse: collapse;
+
+	position: relative;
+	display: flex;
+
+	&__table {
+		border-collapse: collapse;
+		width: 100%;
+		margin-bottom: 35px;
+	}
+
+	&__scroll {
+		margin: 35px 0 0 0;
+		padding: 0 30px;
+		display: flex;
+		flex: 1;
+		flex-direction: row;
+		overflow-y: scroll;
+		overflow-x: hidden;
+	}
 
 	&__header {
 		color: rgba(120, 144, 156, 0.6);
 		font-size: 11px;
 		text-transform: uppercase;
 		text-align: left;
-		padding: 0 10px 15px 10px;
-		text-decoration: underline;
+
+		&-label {
+			text-decoration: underline;
+			position: absolute;
+			top: 10px;
+		}
+		&-ghost {
+			visibility: hidden;
+			height: 0;
+			display: block;
+		}
 	}
 
 	&__body {
@@ -19,10 +44,18 @@
 
 	&__cell {
 		padding: 10px;
+
+		&--debit {
+			color: #a94442;
+		}
+
+		&--credit {
+			color: #3c763d;
+		}
+
 	}
 
 	&__cell{
 		border: 1px solid #E9EEF2;
 	}
-
 }

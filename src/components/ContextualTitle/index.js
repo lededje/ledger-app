@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-export default () => (
-	<div className="contextual-title">
-		1,231 transactions
-	</div>
+export default ({transactions}) => (
+	<header className="contextual-title flex--static">
+		{transactions.length} transactions
+	</header>
 )
