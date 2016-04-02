@@ -43,10 +43,16 @@
 	}
 
 	&__controls {
+		display: none;
 		order: 3;
 		width: 100%;
 		background: #eff3f5;
-		padding: 15px;
+		padding: 10px 15px;
+		margin: 15px 0 10px;
+	}
+
+	&__checkbox:checked + &__controls {
+		display: block;
 	}
 
 	&__control {
@@ -54,6 +60,7 @@
 		font-size: 13px;
 		line-height: 18px;
 		margin: 5px 0;
+		align-items: center;
 	}
 
 	&__control-label {

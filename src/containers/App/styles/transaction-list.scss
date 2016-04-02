@@ -10,8 +10,8 @@
 	}
 
 	&__scroll {
-		margin: 35px 0 0 0;
-		padding: 0 30px;
+		margin: 40px 0 0 0;
+		padding: 0 20px;
 		display: flex;
 		flex: 1;
 		flex-direction: row;
@@ -24,11 +24,12 @@
 		font-size: 11px;
 		text-transform: uppercase;
 		text-align: left;
+		padding: 0 10px;
 
 		&-label {
 			text-decoration: underline;
 			position: absolute;
-			top: 10px;
+			top: 15px;
 		}
 		&-ghost {
 			visibility: hidden;
@@ -42,8 +43,52 @@
 		font-size: 14px;
 	}
 
+	&__no-image {
+		height: 20px;
+		width: 20px;
+		text-align: center;
+		line-height: 20px;
+		color: #fff;
+		display: inline-block;
+	}
+
+	&__select-input {
+		display: none;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translateY(-50%) translateX(-50%);
+
+		&:checked {
+			display: inline-block;
+		}
+
+		&:checked + .transaction-list__image,
+		&:checked + .transaction-list__no-image {
+			visibility: hidden;
+		}
+	}
+
+
+
+	&__row:hover {
+		.transaction-list__select-input {
+			display: inline-block;
+		}
+
+		.transaction-list__image, .transaction-list__no-image {
+			visibility: hidden;
+		}
+	}
+
 	&__cell {
 		padding: 10px;
+		border: 1px solid #E9EEF2;
+		position: relative;
+
+		&--slim {
+    		width: 1px;
+		}
 
 		&--debit {
 			color: #a94442;
@@ -53,9 +98,5 @@
 			color: #3c763d;
 		}
 
-	}
-
-	&__cell{
-		border: 1px solid #E9EEF2;
 	}
 }
