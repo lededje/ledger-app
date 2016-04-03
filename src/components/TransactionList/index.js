@@ -48,7 +48,7 @@ export default ({transactions}) => {
 								let desc = transaction.merchant && transaction.merchant.name || transaction.description;
 								return (
 									<tr className="transaction-list__row" key={transaction.id}>
-										<td className="transaction-list__cell transaction-list__cell--slim ">
+										<td className="transaction-list__cell transaction-list__cell--slim">
 											<input className="transaction-list__select-input" type="checkbox" />
 											{
 												transaction.merchant && transaction.merchant.logo && <img className="transaction-list__image" src={transaction.merchant.logo} height="20" width="20" />
@@ -56,10 +56,22 @@ export default ({transactions}) => {
 												<span className="transaction-list__no-image" style={{backgroundColor: intToMaterialColor(hashString(desc))}}>{desc.substr(0, 1).toUpperCase()}</span>
 											}
 										</td>
-										<td className="transaction-list__cell">{desc}</td>
-										<td className="transaction-list__cell">{moment(transaction.updated).format('dddd Do MMMM \'YY')}</td>
-										<td className="transaction-list__cell">{transaction.merchant && transaction.merchant.address && transaction.merchant.address.formatted}</td>
-										<td className="transaction-list__cell" style={{textTransform: 'capitalize'}}>{transaction.category.replace(/\_/g, ' ')}</td>
+										<td className="transaction-list__cell transaction-list__cell--filterable">
+											{desc}
+											<span className="transaction-list__hot-filter fa fa-filter"></span>
+										</td>
+										<td className="transaction-list__cell">
+											{moment(transaction.updated).format('dddd Do MMMM \'YY')}
+											<span className="transaction-list__hot-filter fa fa-filter"></span>
+										</td>
+										<td className="transaction-list__cell">
+											{transaction.merchant && transaction.merchant.address && transaction.merchant.address.formatted}
+											<span className="transaction-list__hot-filter fa fa-filter"></span>
+										</td>
+										<td className="transaction-list__cell" style={{textTransform: 'capitalize'}}>
+											{transaction.category.replace(/\_/g, ' ')}
+											<span className="transaction-list__hot-filter fa fa-filter"></span>
+										</td>
 										<td className={"transaction-list__cell " + type} style={{'textAlign': 'right'}}>{sign}£{amount}</td>
 										<td className="transaction-list__cell"></td>
 									</tr>

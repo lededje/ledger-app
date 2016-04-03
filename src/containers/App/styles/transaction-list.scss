@@ -69,8 +69,6 @@
 		}
 	}
 
-
-
 	&__row:hover {
 		.transaction-list__select-input {
 			display: inline-block;
@@ -78,6 +76,20 @@
 
 		.transaction-list__image, .transaction-list__no-image {
 			visibility: hidden;
+		}
+	}
+
+	&__hot-filter {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+		opacity: 0.3;
+		padding: 0.5em;
+
+		&:hover {
+			opacity: 0.7 !important;
+			cursor: pointer;
 		}
 	}
 
@@ -98,5 +110,12 @@
 			color: #3c763d;
 		}
 
+		.transaction-list__hot-filter {
+			opacity: 0;
+		}
+
+		&:hover .transaction-list__hot-filter {
+			opacity: 0.3;
+		}
 	}
 }

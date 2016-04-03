@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import * as transactionActions from 'actions/transaction';
+import * as actions from 'actions/index';
 
 /* global styles for app */
 import './styles/app.scss';
@@ -10,12 +10,12 @@ import './styles/app.scss';
 import Navigation from 'components/Navigation'
 import ContextualNavigation from 'components/ContextualNavigation'
 import ContextualTitle from 'components/ContextualTitle'
-import Filters from 'components/Filters'
+import Filters from 'containers/Filters'
 import TransactionList from 'components/TransactionList'
 
 @connect(
   state => state.transactions,
-  dispatch => bindActionCreators(transactionActions, dispatch)
+  dispatch => bindActionCreators(actions, dispatch)
 )
 
 export class App extends Component {
