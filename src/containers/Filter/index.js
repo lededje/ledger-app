@@ -5,7 +5,9 @@ import { connect } from 'react-redux';
 import * as actions from 'actions/index';
 
 @connect(
-  state => state.filters,
+  state => {
+    return {filters: state.filters}
+  },
   dispatch => bindActionCreators(actions, dispatch)
 )
 
@@ -37,17 +39,37 @@ export default class Filter extends Component {
     } else {
       this.props.unsetFilter(name);
     }
+  }
 
+  onFilterChange(e) {
+    let input, name, filter;
+
+    input = e.target;
+    name = input.name.replace('__filter', '');
+    filter = input.value;
+
+    this.props.setFilter(name, filter)
+  }
+
+  onFilterValueChange(e) {
+    let input, name, filter, value;
+
+    input = e.target;
+    name = input.name.split('__')[0];
+    filter = input.name.split('__')[1];
+    value = input.value;
   }
 
   render () {
     let {name, label, type} = this.props;
 
+    let attributeChecked = typeof this.props.filters[name] === 'object';
+
     return (
       <li className="filter">
+        <input name={name} id={'filter__' + name} onChange={this.onAttributeChange.bind(this)} className="filter__checkbox" type="checkbox" checked={attributeChecked && 'checked'} />
         <label htmlFor={'filter__' + name} className="filter__label">{label}</label>
-        <input name={name} id={'filter__' + name} onChange={this.onAttributeChange.bind(this)} className="filter__checkbox" type="checkbox"/>
-        <div className="filter__controls">
+        <div className={'filter__controls ' + (attributeChecked ? 'filter__controls--show' : '')}>
           {
             types[type] && types[type] && types[type].map( filterConfig => {
 
@@ -55,15 +77,15 @@ export default class Filter extends Component {
 
               // A bundled blob of attributes and filter details for the filter
               // components to use
+
               attributes = {
-                name,
-                label,
+                ...this.props,
                 filter: {
                   ...filterConfig
                 }
-              };
+              }
 
-              return <filterConfig.component {...attributes} />
+              return <filterConfig.component onFilterChange={this.onFilterChange.bind(this)} onFilterValueChange={this.onFilterValueChange.bind(this)} {...attributes} />
             })
           }
         </div>
@@ -72,7 +94,11 @@ export default class Filter extends Component {
   }
 }
 
-let Control = ({name, label, filter}) => {
+let Control = (props) => {
+
+  let {name, label, filter, onFilterChange, onFilterValueChange} = props;
+
+  let filterChecked = props.filters[name] && props.filters[name].filter === filter.name;
 
   return (
     <div className="filter__control" key={name + '__' + filter.name}>
@@ -80,7 +106,7 @@ let Control = ({name, label, filter}) => {
       <label htmlFor={name + '__' + filter.name} className="filter__control-label">{filter.label}</label>
       {
         filter && filter.input &&
-        <div className="filter__control-value-wrapper">
+        <div className={'filter__control-value-wrapper ' + (filterChecked ? 'filter__control-value-wrapper--show' : '')}>
           {
             filter.input.prefix && <div className="filter__control-value-label">{filter.input.prefix}</div>
           }
@@ -97,23 +123,6 @@ let Control = ({name, label, filter}) => {
 let Label = ({label}) => (
   <div className="filter__controls-label">{label}</div>
 )
-
-function onFilterChange(e) {
-  let input, name, filter;
-
-  input = e.target;
-  name = input.name.replace('__filter', '');
-  filter = input.value;
-}
-
-function onFilterValueChange(e) {
-  let input, name, filter, value;
-
-  input = e.target;
-  name = input.name.split('__')[0];
-  filter = input.name.split('__')[1];
-  value = input.value;
-}
 
 let types = {
   number: [
