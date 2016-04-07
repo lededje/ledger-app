@@ -60,13 +60,12 @@
 
 	&__control-value-wrapper {
 		padding-left: 20px;
-		display: flex;
 		align-items: center;
 
 		display: none;
 
 		&--show {
-			display: block;
+			display: flex;
 		}
 
 	}
