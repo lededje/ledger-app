@@ -19,7 +19,7 @@ export default class App extends Component {
           <div className="filters__title">Tx Data</div>
 
           <ul className="filters__list">
-            <Filter name="amount" label="Amount" type="number" />
+            <Filter name="amount" label="Amount" type="money" />
             <Filter name="created" label="Created" type="date" />
             <Filter name="currency" label="Currency" type="string" />
             <Filter name="description" label="Description" type="string" />

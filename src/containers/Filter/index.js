@@ -169,6 +169,54 @@ let types = {
       name: 'is-unknown'
     }
   ],
+  money: [
+    {
+      component: Control,
+      label: 'greater than',
+      name: 'greater-than',
+      input: {
+        prefix: '£',
+        type: 'number'
+      }
+    },
+    {
+      component: Control,
+      label: 'less than',
+      name: 'less-than',
+      input: {
+        prefix: '£',
+        type: 'number'
+      }
+    },
+    {
+      component: Control,
+      label: 'is',
+      name: 'is',
+      input: {
+        prefix: '£',
+        type: 'number'
+      }
+    },
+    {
+      component: Control,
+      label: 'is not',
+      name: 'is-not',
+      input: {
+        prefix: '£',
+        type: 'number'
+      }
+    },
+    {
+      component: Control,
+      label: 'is known',
+      name: 'is-known'
+    },
+    {
+      component: Control,
+      label: 'is unknown',
+      name: 'is-unknown'
+    }
+  ],
   string: [
     {
       component: Control,
