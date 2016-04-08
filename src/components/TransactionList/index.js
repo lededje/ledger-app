@@ -3,6 +3,7 @@ import moment from 'moment'
 import Big from 'big.js'
 import hashString from 'utils/hashString';
 import intToMaterialColor from 'utils/intToMaterialColor';
+import getSymbol from 'currency-symbol-map'
 
 export default ({transactions}) => {
 	return (
@@ -43,9 +44,12 @@ export default ({transactions}) => {
 							transactions.map( transaction => {
 
 								let amount = Math.abs(parseFloat(Big(transaction.amount || 0).div('100').valueOf())).toFixed(2);
+								let localAmount = Math.abs(parseFloat(Big(transaction.local_amount || 0).div('100').valueOf())).toFixed(2);
+
 								let sign = transaction.amount <= 0 ? '-' : '';
 								let type = transaction.amount <= 0 ? 'transaction-list__cell--debit' : 'transaction-list__cell--credit';
 								let desc = transaction.merchant && transaction.merchant.name || transaction.description;
+
 								return (
 									<tr className="transaction-list__row" key={transaction.id}>
 										<td className="transaction-list__cell transaction-list__cell--slim">
@@ -72,7 +76,14 @@ export default ({transactions}) => {
 											{transaction.category.replace(/\_/g, ' ')}
 											<span className="transaction-list__hot-filter fa fa-filter"></span>
 										</td>
-										<td className={"transaction-list__cell " + type} style={{'textAlign': 'right'}}>{sign}£{amount}</td>
+										<td className={"transaction-list__cell " + type} style={{'textAlign': 'right'}}>
+											{sign}£{amount}
+											{
+												amount !== localAmount
+												? <div><small>{(sign + getSymbol(transaction.local_currency) + localAmount)}</small></div>
+													: ''
+											}
+										</td>
 										<td className="transaction-list__cell"></td>
 									</tr>
 								)
