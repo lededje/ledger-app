@@ -110,6 +110,10 @@
 			color: #3c763d;
 		}
 
+		&--filterable {
+			padding-right: 25px;
+		}
+
 		.transaction-list__hot-filter {
 			opacity: 0;
 		}
