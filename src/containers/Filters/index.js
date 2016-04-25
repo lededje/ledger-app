@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Filter from 'containers/Filter';
+import Property from 'containers/Property';
 
 export default class App extends Component {
   render() {
@@ -19,13 +19,13 @@ export default class App extends Component {
           <div className="filters__title">Tx Data</div>
 
           <ul className="filters__list">
-            <Filter name="amount" label="Amount" type="money" />
-            <Filter name="created" label="Created" type="date" />
-            <Filter name="currency" label="Currency" type="string" />
-            <Filter name="description" label="Description" type="string" />
-            <Filter name="city" label="City" type="string" />
-            <Filter name="category" label="Category" type="string" />
-            <Filter name="settled" label="Settled" type="boolean" />
+            <Property name="amount" label="Amount" type="money" />
+            <Property name="created" label="Created" type="date" />
+            <Property name="currency" label="Currency" type="string" />
+            <Property name="merchant.name" label="Merchant" type="string" />
+            <Property name="city" label="City" type="string" />
+            <Property name="category" label="Category" type="string" />
+            <Property name="settled" label="Settled" type="boolean" />
           </ul>
         </div>
       </div>

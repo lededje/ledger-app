@@ -1,0 +1,1175 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"defaul",
+				"defaultReturn"
+			],
+			[
+				"transa",
+				"transactionsFilter"
+			],
+			[
+				"eq",
+				"equalTo"
+			],
+			[
+				"filet",
+				"filter"
+			],
+			[
+				"does",
+				"doesNotContain"
+			],
+			[
+				"filter",
+				"filteredTransactions"
+			],
+			[
+				"filer",
+				"filters"
+			],
+			[
+				"local",
+				"localAmount"
+			],
+			[
+				"greater",
+				"greaterThan"
+			],
+			[
+				"translate",
+				"translateY"
+			],
+			[
+				"for",
+				"forin	Array Comprehension"
+			],
+			[
+				"Store",
+				"StoreLocaterTemplate"
+			],
+			[
+				"border-left",
+				"border-top-left-radius"
+			],
+			[
+				"de",
+				"deincrementAmount"
+			],
+			[
+				"Tabs",
+				"TabsView"
+			],
+			[
+				"Transac",
+				"transactionsCollection"
+			],
+			[
+				"template",
+				"templateXhr"
+			],
+			[
+				"normalize",
+				"normalizeCoordinates"
+			],
+			[
+				"vent",
+				"ventEvent"
+			],
+			[
+				"Demotask",
+				"DEMO_TASK_MODEL_JSON"
+			],
+			[
+				"Task",
+				"TaskCollection"
+			],
+			[
+				"DEMOT",
+				"DEMO_TASK_MODEL_JSON"
+			],
+			[
+				"DEMO",
+				"DEMO_TASK_MODEL_JSON"
+			],
+			[
+				"Tas",
+				"TaskModel"
+			],
+			[
+				"deferred",
+				"deferredRerenderTimeout"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"delete",
+				"File: Delete"
+			],
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				"lower",
+				"Convert Case: Lower Case"
+			],
+			[
+				"ss babel",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"move",
+				"File: Move"
+			],
+			[
+				"blame",
+				"Git: Blame"
+			],
+			[
+				"git balme",
+				"Git: Blame"
+			],
+			[
+				"eval",
+				"Emmet: Evaluate Math Expression"
+			],
+			[
+				"bale",
+				"Emmet: Balance (inward)"
+			],
+			[
+				"ss babl",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"ss next",
+				"Set Syntax: JavaScript Next"
+			],
+			[
+				"ssbabel",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"ss jsbabel",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"ssjsbabe",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"ss js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"ss scss",
+				"Set Syntax: SCSS"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"fetch",
+				"Git: Fetch"
+			],
+			[
+				"title",
+				"Convert Case: Title Case"
+			],
+			[
+				"reveal",
+				"File: Reveal"
+			],
+			[
+				"status",
+				"Git: Status"
+			],
+			[
+				"stats",
+				"Git: Status"
+			],
+			[
+				"delet",
+				"File: Delete"
+			],
+			[
+				"revert",
+				"File: Revert"
+			],
+			[
+				"wrap",
+				"Emmet: Wrap With Abbreviation"
+			],
+			[
+				"ss less",
+				"Set Syntax: LESS"
+			],
+			[
+				"isntall",
+				"Package Control: Install Package"
+			],
+			[
+				"ss coffee",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"glue",
+				"Glue - Launch"
+			],
+			[
+				"moe",
+				"File: Move"
+			],
+			[
+				"mov",
+				"File: Move"
+			]
+		],
+		"width": 521.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/miles/repos/ledger-app",
+		"/Users/miles/repos/ledger-app/src",
+		"/Users/miles/repos/ledger-app/webpack"
+	],
+	"file_history":
+	[
+		"/Users/miles/repos/ledger-app/src/utils/transactionsFilter.js",
+		"/Users/miles/repos/ledger-app/webpack/common.config.js",
+		"/Users/miles/repos/ledger-app/src/test/utils/transactionsFilter.spec.js",
+		"/Users/miles/repos/ledger-app/package.json",
+		"/Users/miles/repos/ledger-app/src/lib/sinon.js",
+		"/Users/miles/repos/lededje-app/cd",
+		"/Users/miles/repos/ledger-app/src/utils/filterTypes.js",
+		"/Users/miles/repos/ledger-app/src/containers/Filters/index.js",
+		"/Users/miles/repos/ledger-app/src/components/TransactionList/index.js",
+		"/Users/miles/repos/ledger-app/ledger-app.sublime-project",
+		"/Users/miles/repos/ledger-app/webpack/dev.config.js",
+		"/Users/miles/repos/ledger-app/webpack/prod.config.js",
+		"/Users/miles/repos/ledger-app/src/test/data/transactions.js",
+		"/Users/miles/repos/ledger-app/src/test/reducers/items.spec.js",
+		"/Users/miles/repos/ledger-app/src/containers/Property/index.js",
+		"/Users/miles/repos/ledger-app/src/components/FilterControl.js",
+		"/Users/miles/repos/ledger-app/src/reducers/filters.js",
+		"/Users/miles/repos/ledger-app/src/components/FilterControlLabel.js",
+		"/Users/miles/repos/ledger-app/src/utils/intToMaterialColor.js",
+		"/Users/miles/repos/ledger-app/src/actions/index.js",
+		"/Users/miles/repos/ledger-app/src/reducers/filteredTransactions.js",
+		"/Users/miles/repos/ledger-app/src/containers/App/styles/filter.scss",
+		"/Users/miles/repos/ledger-app/src/containers/App/styles/filters.scss",
+		"/Users/miles/repos/ledger-app/src/reducers/transactions.js",
+		"/Users/miles/repos/osper-app/src/js/shims/AppRateShim.js",
+		"/Users/miles/repos/osper-app/src/js/views/loadMoneyView.js",
+		"/Users/miles/repos/osper-app/config.xml",
+		"/Users/miles/repos/osper-app/src/config.xml.tpl",
+		"/Users/miles/repos/ledger-app/src/containers/App/styles/fonts/font-awesome.scss",
+		"/Users/miles/repos/ledger-app/src/containers/App/styles/transaction-list.scss",
+		"/Users/miles/repos/ledger-app/src/containers/Filter/index.js",
+		"/Users/miles/repos/osper-app/src/js/app.js",
+		"/Users/miles/repos/osper-app/Makefile",
+		"/Users/miles/repos/osper-app/package.json",
+		"/Users/miles/repos/osper-app/src/js/views/homeView.js",
+		"/Users/miles/repos/osper-app/src/js/views/allowanceView.js",
+		"/Users/miles/repos/osper-app/src/js/views/OnboardingPinView.js",
+		"/Users/miles/repos/osper-app/src/js/views/onboardingTemplateView.js",
+		"/Users/miles/repos/osper-app/src/css/app.css",
+		"/Users/miles/repos/osper-app/src/templates/onboarding/onboardingTemplate.html",
+		"/Users/miles/repos/ledger-app/src/reducers/index.js",
+		"/Users/miles/repos/osper-app/spec/views/homeView.spec.js",
+		"/Users/miles/repos/ledger-app/src/containers/App/styles/contextual-side-navigation.scss",
+		"/Users/miles/repos/ledger-app/src/containers/App/styles/app.scss",
+		"/Users/miles/repos/ledger-app/node_modules/jade/lib/filters.js",
+		"/Users/miles/repos/ledger-app/src/utils/hashString.js",
+		"/Users/miles/repos/osper-app/src/js/views/OnboardingParentDetailsView.js",
+		"/Users/miles/repos/osper-app/src/js/models/OnboardingParentDetailsModel.js",
+		"/Users/miles/repos/webpresence-mobile/Makefile",
+		"/Users/miles/repos/webpresence-mobile/bower.json",
+		"/Users/miles/repos/webpresence-mobile/package.json",
+		"/Users/miles/repos/webpresence-mobile/src/coffee/views/Modules/AddToBasketView.coffee",
+		"/Users/miles/repos/webpresence-mobile/src/coffee/config.coffee",
+		"/Users/miles/repos/webpresence-mobile/.tmp/js/views/Modules/AddToBasketView.js",
+		"/Users/miles/repos/ledger-app/src/components/Filters/index.js",
+		"/Users/miles/repos/ledger-app/src/containers/App/styles/wrappers.scss",
+		"/Users/miles/repos/ledger-app/src/actions/transaction.js",
+		"/Users/miles/repos/ledger-app/src/components/ContextualTitle/index.js",
+		"/Users/miles/repos/ledger-app/src/containers/App/index.js",
+		"/Users/miles/repos/ledger-app/src/components/ContextualNavigation/index.js",
+		"/Users/miles/repos/ledger-app/src/components/Navigation/index.js",
+		"/Users/miles/repos/ledger-app/src/containers/App/styles/contextual-title.scss",
+		"/Users/miles/repos/ledger-app/src/actions/items.js",
+		"/Users/miles/repos/ledger-app/src/containers/App/styles/contextual-navigation.scss",
+		"/Users/miles/repos/ledger-app/src/containers/Home/index.js",
+		"/Users/miles/repos/ledger-app/src/routes.js",
+		"/Users/miles/repos/webpresence-mobile/src/less/main.less",
+		"/Users/miles/repos/webpresence-mobile/src/less/form.less",
+		"/Users/miles/repos/webpresence-mobile/src/templates/Modules/PersonalDetailsTemplate.tpl",
+		"/Users/miles/repos/webpresence-mobile/src/coffee/core/MyItemView.coffee",
+		"/Users/miles/repos/webpresence-mobile/src/templates/Modules/BasketTemplate.tpl",
+		"/Users/miles/repos/webpresence-mobile/src/coffee/utils/mockjax.coffee",
+		"/Users/miles/repos/webpresence-mobile/src/coffee/mocks/personal-details-form.json",
+		"/Users/miles/repos/webpresence-mobile/src/templates/Modules/AddToBasketTemplate.tpl",
+		"/Users/miles/repos/webpresence-mobile/src/coffee/mocks/product.json",
+		"/Users/miles/repos/webpresence-mobile/src/coffee/core/MyModel.coffee",
+		"/Users/miles/repos/webpresence-mobile/src/coffee/mocks/session.json",
+		"/Users/miles/repos/webpresence-mobile/src/templates/Modules/StoreLocatorTemplate.tpl",
+		"/Users/miles/repos/webpresence-mobile/src/coffee/mocks/basket.json",
+		"/Users/miles/repos/webpresence-mobile/src/coffee/views/Modules/StoreLocatorView.coffee",
+		"/Users/miles/repos/webpresence-mobile/src/coffee/mocks/store-locator.json",
+		"/Users/miles/repos/webpresence-mobile/src/index.html",
+		"/Users/miles/repos/webpresence-mobile/src/coffee/models/SessionModel.coffee",
+		"/Users/miles/repos/webpresence-mobile/src/coffee/views/GenericView.coffee",
+		"/Users/miles/repos/webpresence-mobile/src/templates/Modules/StoreLocator.tpl",
+		"/Users/miles/repos/webpresence-mobile/src/coffee/mocks/store-locater.json",
+		"/Users/miles/repos/webpresence-mobile/src/coffee/views/Modules/BasketView.coffee",
+		"/Users/miles/repos/webpresence-mobile/src/less/table.less",
+		"/Users/miles/repos/webpresence-mobile/src/less/btn.less",
+		"/Users/miles/repos/webpresence-mobile/Gruntfile.coffee",
+		"/Users/miles/repos/webpresence-mobile/src/less/add-to-basket.less",
+		"/Users/miles/repos/webpresence-mobile/src/less/html.less",
+		"/Users/miles/repos/webpresence-mobile/src/less/tabs.less",
+		"/Users/miles/repos/webpresence-mobile/src/coffee/views/Modules/TabsView.coffee",
+		"/Users/miles/repos/webpresence-mobile/src/coffee/mocks/home.json",
+		"/Users/miles/repos/webpresence-mobile/src/coffee/mocks/specific-category.json",
+		"/Users/miles/repos/webpresence-mobile/src/templates/Modules/ProductDetailTemplate.tpl",
+		"/Users/miles/repos/webpresence-mobile/src/templates/Modules/ProductListTemplate.tpl",
+		"/Users/miles/repos/webpresence-mobile/src/templates/HeaderTemplate.tpl",
+		"/Users/miles/repos/webpresence-mobile/src/templates/Modules/ListTemplate.tpl",
+		"/Users/miles/repos/webpresence-mobile/src/less/pagination.less",
+		"/Users/miles/repos/webpresence-mobile/src/coffee/models/GenericModel.coffee",
+		"/Users/miles/repos/webpresence-mobile/src/coffee/views/Modules/ListView.coffee",
+		"/Users/miles/repos/webpresence-mobile/src/coffee/views/Modules/FooterView.coffee",
+		"/Users/miles/repos/webpresence-mobile/src/coffee/layouts/MainLayout.coffee",
+		"/Users/miles/repos/webpresence-mobile/.tmp/js/core/MyModel.js",
+		"/Users/miles/repos/webpresence-mobile/webpresence-mobile.sublime-project",
+		"/Users/miles/repos/webpresence-mobile/src/templates/Layouts/MainTemplate.tpl",
+		"/Users/miles/repos/webpresence-mobile/src/coffee/controllers/Controller.coffee",
+		"/Users/miles/repos/webpresence-mobile/src/coffee/core/MyController.coffee",
+		"/Users/miles/repos/webpresence-mobile/src/coffee/App.coffee",
+		"/Users/miles/repos/webpresence-mobile/spec/tests/GenericView.Spec.coffee",
+		"/Users/miles/repos/webpresence-mobile/karma.conf.js",
+		"/Users/miles/repos/webpresence-mobile/spec/test-main.js",
+		"/Users/miles/repos/osper-website/dastardly/dastardly.sublime-",
+		"/Users/miles/repos/webpresence-mobile/src/templates/Modules/TabsTemplate.tpl",
+		"/Users/miles/repos/webpresence-mobile/src/templates/Modules/PaginationTemplate.tpl",
+		"/Users/miles/repos/webpresence-mobile/src/coffee/mocks/generic.json",
+		"/Users/miles/repos/webpresence-mobile/src/bower/backbone/CONTRIBUTING.md",
+		"/Users/miles/repos/webpresence-mobile/src/bower/backbone/CNAME",
+		"/Users/miles/repos/webpresence-mobile/src/bower/normalize-css/normalize.css",
+		"/Users/miles/repos/webpresence-mobile/.tmp/js/views/GenericView.js",
+		"/Users/miles/repos/webpresence-mobile/src/coffee/views/Modules/HtmlView.coffee",
+		"/Users/miles/repos/webpresence-mobile/src/less/footer.less",
+		"/Users/miles/repos/webpresence-mobile/src/less/filter-options.less",
+		"/Users/miles/repos/webpresence-mobile/src/less/font.less",
+		"/Users/miles/repos/webpresence-mobile/src/less/product.less",
+		"/Users/miles/repos/webpresence-mobile/todo.md"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"false",
+			"lessThan",
+			"sinon",
+			"isDefined",
+			")\n          ",
+			"default",
+			"a",
+			"  ",
+			"isNumber",
+			"name: 'starts-with',",
+			"tx[action.attribute]",
+			"Description",
+			"      name: 'is-unknown'",
+			"      name: 'is-known'",
+			"name: 'is-not',",
+			"name: 'is',",
+			"if(",
+			"filter",
+			"_",
+			"case '",
+			"LESS_THAN",
+			"filterType",
+			"date",
+			"filter: fn.",
+			"filter:",
+			"fn.",
+			": (",
+			"this.props.name",
+			"this.name",
+			"lorem",
+			"title",
+			"name=\"",
+			"Osper.ipa",
+			"platforms/ios/build/device/Osper.app",
+			"shake",
+			"<plugin name=\"",
+			"prepare",
+			"lorem",
+			"filter",
+			"Filter",
+			"name",
+			"attribute",
+			"filterChecked",
+			"types",
+			"Label,",
+			"containers",
+			"FilterControl",
+			"Label",
+			"label",
+			"Label",
+			"Control",
+			"filterTypes",
+			"Control",
+			"<span className=\"transaction-list__hot-filter",
+			"lastpass",
+			"ios-team-",
+			"branch",
+			"AnalyticsModel",
+			"NotificationHelper",
+			"div",
+			"transactions",
+			"label",
+			"input.",
+			"input",
+			"\n      type:",
+			"      type:",
+			"key",
+			"dashedName",
+			"label",
+			"key",
+			"label",
+			"attribute",
+			"{'filter__' + args.key}",
+			"attribute",
+			"name",
+			"args.name",
+			"name",
+			"Name",
+			"name",
+			"branch",
+			"plugin",
+			"plugin ",
+			"cordova pl",
+			"branch",
+			"AnalyticsModel",
+			"transactionActions",
+			"is",
+			" ",
+			"is",
+			"greater than",
+			"after",
+			"input: {",
+			"{",
+			"less than",
+			"more",
+			"controls",
+			"label",
+			"suffix",
+			"!",
+			"any-value",
+			"postLabel",
+			"({name})",
+			"value-wrapper",
+			"FilterComponent",
+			"number",
+			"name, type",
+			"is-known",
+			"is-unknown",
+			"is known",
+			"        ",
+			"        <li className=\"filter\">",
+			"          <label htmlFor",
+			"            ",
+			"<input name={name",
+			"\"filter__amount\"",
+			"htmlFor=\"filter__amount\"",
+			"t__i",
+			"id=\"amount",
+			"\" className=\"filter__control",
+			"htmlFor=\"amount",
+			"amount",
+			"\"amount\"",
+			"&__h",
+			"div",
+			"row",
+			"hashString",
+			"this",
+			"OnboardingAddChildStep"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 94.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 94.0
+	},
+	"pinned_build_system": "",
+	"project": "ledger-app.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"transactions",
+				"src/components/TransactionList/index.js"
+			],
+			[
+				"actions/index",
+				"src/actions/index.js"
+			],
+			[
+				"proper",
+				"src/containers/Property/index.js"
+			],
+			[
+				"filter",
+				"src/containers/App/styles/filter.scss"
+			],
+			[
+				"transaction",
+				"src/components/TransactionList/index.js"
+			],
+			[
+				"src/reducers/filters.js",
+				"src/reducers/filters.js"
+			],
+			[
+				"filters",
+				"src/containers/App/styles/filters.scss"
+			],
+			[
+				"filter.scss",
+				"src/containers/App/styles/filters.scss"
+			],
+			[
+				"config.xml",
+				"src/config.xml.tpl"
+			],
+			[
+				"filterscss",
+				"src/containers/App/styles/filter.scss"
+			],
+			[
+				"filter/ind",
+				"src/containers/Filter/index.js"
+			],
+			[
+				"transactionlist",
+				"src/containers/App/styles/transaction-list.scss"
+			],
+			[
+				"app.js",
+				"src/js/app.js"
+			],
+			[
+				"make",
+				"Makefile"
+			],
+			[
+				"package",
+				"package.json"
+			],
+			[
+				"homeview",
+				"src/js/views/homeView.js"
+			],
+			[
+				"loginformview",
+				"src/js/views/loginFormView.js"
+			],
+			[
+				"allowanceview",
+				"src/js/views/allowanceView.js"
+			],
+			[
+				"onboardingpinview",
+				"src/js/views/OnboardingPinView.js"
+			],
+			[
+				"app.css",
+				"src/css/app.css"
+			],
+			[
+				"onboardingtemplate",
+				"src/templates/onboarding/onboardingTemplate.html"
+			],
+			[
+				"templateview.",
+				"src/js/views/onboardingTemplateView.js"
+			],
+			[
+				"kyccheck.html",
+				"src/templates/onboarding/kycCheck.html"
+			],
+			[
+				"kyccheck",
+				"src/js/views/OnboardingKycCheck.js"
+			],
+			[
+				"contextualside",
+				"src/containers/App/styles/contextual-side-navigation.scss"
+			],
+			[
+				"filtersindex",
+				"src/components/Filters/index.js"
+			],
+			[
+				"transaction-list",
+				"src/containers/App/styles/transaction-list.scss"
+			],
+			[
+				"pricingtemplate",
+				"src/templates/onboarding/PricingTemplate.html"
+			],
+			[
+				"parentdetailsmodel",
+				"src/js/models/OnboardingParentDetailsModel.js"
+			],
+			[
+				"parentdetailsview",
+				"src/js/views/OnboardingParentDetailsView.js"
+			],
+			[
+				"config.coffee",
+				"src/coffee/config.coffee"
+			],
+			[
+				"addtobasketcoff",
+				"src/coffee/views/Modules/AddToBasketView.coffee"
+			],
+			[
+				"addtobas",
+				".tmp/js/views/Modules/AddToBasketView.js"
+			],
+			[
+				"parentdeti",
+				"src/templates/onboarding/ParentDetailsTemplate.html"
+			],
+			[
+				"wrappers",
+				"src/containers/App/styles/wrappers.scss"
+			],
+			[
+				"trasnactionlist",
+				"src/containers/App/styles/transaction-list.scss"
+			],
+			[
+				"wrapper",
+				"src/containers/App/styles/wrappers.scss"
+			],
+			[
+				"contextualtitle",
+				"src/components/ContextualTitle/index.js"
+			],
+			[
+				"src/components/navigation/index.js",
+				"src/components/Navigation/index.js"
+			],
+			[
+				"wrappers.scss",
+				"src/containers/App/styles/wrappers.scss"
+			],
+			[
+				"contextualnav",
+				"src/components/ContextualNavigation/index.js"
+			],
+			[
+				"wrapper.scss",
+				"src/containers/App/styles/wrappers.scss"
+			],
+			[
+				"contextualnavi",
+				"src/components/ContextualNavigation/index.js"
+			],
+			[
+				"contextual",
+				"src/containers/App/styles/contextual-navigation.scss"
+			],
+			[
+				"personaldeta",
+				"src/templates/Modules/PersonalDetailsTemplate.tpl"
+			],
+			[
+				"mock",
+				"src/coffee/utils/mockjax.coffee"
+			],
+			[
+				"myitem",
+				"src/coffee/core/MyItemView.coffee"
+			],
+			[
+				"addtobask",
+				"src/coffee/views/Modules/AddToBasketView.coffee"
+			],
+			[
+				"config",
+				"src/coffee/config.coffee"
+			],
+			[
+				"mainless",
+				"src/less/main.less"
+			],
+			[
+				"baskettpl",
+				"src/templates/Modules/BasketTemplate.tpl"
+			],
+			[
+				"baksettemplate",
+				"src/templates/Modules/BasketTemplate.tpl"
+			],
+			[
+				"myitemview",
+				"src/coffee/core/MyItemView.coffee"
+			],
+			[
+				"prod",
+				"src/coffee/mocks/product.json"
+			],
+			[
+				"mymodel",
+				"src/coffee/core/MyModel.coffee"
+			],
+			[
+				"addtobaskettemplate",
+				"src/templates/Modules/AddToBasketTemplate.tpl"
+			],
+			[
+				"sess",
+				"src/coffee/mocks/session.json"
+			],
+			[
+				"ind",
+				"src/index.html"
+			],
+			[
+				"index.html",
+				"src/index.html"
+			],
+			[
+				"session",
+				"src/coffee/mocks/session.json"
+			],
+			[
+				"sessionmodel",
+				"src/coffee/models/SessionModel.coffee"
+			],
+			[
+				"storelocat",
+				"src/templates/Modules/StoreLocator.tpl"
+			],
+			[
+				"genericvie",
+				"src/coffee/views/GenericView.coffee"
+			],
+			[
+				"storelocator",
+				"src/coffee/views/Modules/StoreLocatorView.coffee"
+			],
+			[
+				"store-l",
+				"src/coffee/mocks/store-locator.json"
+			],
+			[
+				"locator",
+				"src/templates/Modules/StoreLocator.tpl"
+			],
+			[
+				"locater",
+				"src/coffee/mocks/store-locater.json"
+			],
+			[
+				"genericview",
+				"src/coffee/views/GenericView.coffee"
+			],
+			[
+				"gruntfile",
+				"Gruntfile.coffee"
+			],
+			[
+				"btn",
+				"src/less/btn.less"
+			],
+			[
+				"main.less",
+				"src/less/main.less"
+			],
+			[
+				"basketview",
+				"src/coffee/views/Modules/BasketView.coffee"
+			],
+			[
+				"basket",
+				"src/coffee/mocks/basket.json"
+			],
+			[
+				"addto",
+				"src/less/add-to-basket.less"
+			],
+			[
+				"html",
+				"src/less/html.less"
+			],
+			[
+				"addtobasket",
+				"src/coffee/views/Modules/AddToBasketView.coffee"
+			],
+			[
+				"tabsless",
+				"src/less/tabs.less"
+			],
+			[
+				"tabs",
+				"src/coffee/views/Modules/TabsView.coffee"
+			],
+			[
+				"generic",
+				"src/coffee/views/GenericView.coffee"
+			],
+			[
+				"productjson",
+				"src/coffee/mocks/product.json"
+			],
+			[
+				"addtoca",
+				"src/coffee/views/Modules/AddToBasketView.coffee"
+			],
+			[
+				"produc",
+				"src/coffee/mocks/product.json"
+			],
+			[
+				"index",
+				"src/index.html"
+			],
+			[
+				"porductjson",
+				"src/coffee/mocks/product.json"
+			],
+			[
+				"productde",
+				"src/templates/Modules/ProductDetailTemplate.tpl"
+			],
+			[
+				"header",
+				"src/templates/HeaderTemplate.tpl"
+			],
+			[
+				"productdetaite",
+				"src/templates/Modules/ProductDetailTemplate.tpl"
+			],
+			[
+				"producttemplate",
+				"src/templates/Modules/ProductListTemplate.tpl"
+			],
+			[
+				"list",
+				"src/templates/Modules/ListTemplate.tpl"
+			],
+			[
+				"pagination",
+				"src/less/pagination.less"
+			],
+			[
+				"genericmodel",
+				"src/coffee/models/GenericModel.coffee"
+			],
+			[
+				"genericivew",
+				"src/coffee/views/GenericView.coffee"
+			],
+			[
+				"listtemplat",
+				"src/templates/Modules/ListTemplate.tpl"
+			],
+			[
+				"listview",
+				"src/coffee/views/Modules/ListView.coffee"
+			],
+			[
+				"sessi",
+				"src/coffee/mocks/session.json"
+			],
+			[
+				"mymodel.js",
+				".tmp/js/core/MyModel.js"
+			],
+			[
+				"mainlayout",
+				"src/coffee/layouts/MainLayout.coffee"
+			],
+			[
+				"footerview",
+				"src/coffee/views/Modules/FooterView.coffee"
+			],
+			[
+				"controller",
+				"src/coffee/core/MyController.coffee"
+			],
+			[
+				"app.",
+				"src/coffee/App.coffee"
+			],
+			[
+				"mainlay",
+				"src/coffee/layouts/MainLayout.coffee"
+			],
+			[
+				"maintemplate",
+				"src/templates/Layouts/MainTemplate.tpl"
+			],
+			[
+				"layout",
+				"src/coffee/layouts/MainLayout.coffee"
+			],
+			[
+				"tabsview",
+				"src/coffee/views/Modules/TabsView.coffee"
+			],
+			[
+				"mockjax",
+				"src/coffee/utils/mockjax.coffee"
+			],
+			[
+				"product",
+				"src/coffee/mocks/product.json"
+			],
+			[
+				"gener",
+				"src/coffee/mocks/generic.json"
+			],
+			[
+				"product.json",
+				"src/coffee/mocks/product.json"
+			],
+			[
+				"tabs.less",
+				"src/less/tabs.less"
+			],
+			[
+				"tabstemplae",
+				"src/templates/Modules/TabsTemplate.tpl"
+			],
+			[
+				"breadcu",
+				"src/templates/Modules/BreadcrumbTemplate.tpl"
+			],
+			[
+				"bread",
+				"src/templates/Modules/BreadcrumbTemplate.tpl"
+			],
+			[
+				"navigation",
+				"src/less/navigation.less"
+			],
+			[
+				"conf",
+				"src/coffee/config.coffee"
+			],
+			[
+				"headerview",
+				"src/coffee/views/HeaderView.coffee"
+			],
+			[
+				"navigai",
+				"src/coffee/views/NavigationView.coffee"
+			],
+			[
+				"headerless",
+				"src/less/header.less"
+			],
+			[
+				"myview",
+				"src/coffee/core/MyItemView.coffee"
+			],
+			[
+				"myrouter",
+				"src/coffee/core/MyRouter.coffee"
+			],
+			[
+				"router",
+				"src/coffee/routers/Router.coffee"
+			],
+			[
+				"indexcontrol",
+				"src/coffee/controllers/IndexController.coffee"
+			],
+			[
+				"app.coffee",
+				"src/coffee/App.coffee"
+			],
+			[
+				"searchless",
+				"src/less/search.less"
+			],
+			[
+				"headertemp",
+				"src/templates/HeaderTemplate.tpl"
+			],
+			[
+				"searchtem",
+				"src/templates/SearchTemplate.tpl"
+			],
+			[
+				"headertem",
+				"src/templates/HeaderTemplate.tpl"
+			],
+			[
+				"apppag",
+				"src/js/appPagesNavigator.js"
+			],
+			[
+				"accountcollection",
+				"src/js/collections/accountsCollection.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 307.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

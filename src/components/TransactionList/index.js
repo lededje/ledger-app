@@ -10,6 +10,10 @@ import hashString from 'utils/hashString';
 import intToMaterialColor from 'utils/intToMaterialColor';
 import getSymbol from 'currency-symbol-map'
 
+import _ from 'lodash';
+
+import transactionsFilter from 'utils/transactionsFilter';
+
 @connect(
   state => {
     return {filters: state.filters}
@@ -33,6 +37,15 @@ export default class TransactionList extends Component {
 
 		let {transactions} = this.props;
 
+		const filterActions = _.map(this.props.filters, (filter, attribute) => {
+			return {
+				attribute,
+				...filter
+			}
+		});
+
+		const filteredTx = transactionsFilter(transactions, filterActions);
+
 		return (
 			<div className="transaction-list flex">
 				<div className="transaction-list__scroll">
@@ -41,8 +54,8 @@ export default class TransactionList extends Component {
 							<tr>
 								<th className="transaction-list__header"></th>
 								<th className="transaction-list__header">
-									<span className="transaction-list__header-label">Description</span>
-									<span className="transaction-list__header-ghost">Description</span>
+									<span className="transaction-list__header-label">Merchant</span>
+									<span className="transaction-list__header-ghost">Merchant</span>
 								</th>
 								<th className="transaction-list__header">
 									<span className="transaction-list__header-label">Date/Time</span>
@@ -68,14 +81,14 @@ export default class TransactionList extends Component {
 						</thead>
 						<tbody className="transaction-list__body">
 							{
-								transactions.map( transaction => {
+								filteredTx.map( transaction => {
 
 									let amount = Math.abs(parseFloat(Big(transaction.amount || 0).div('100').valueOf())).toFixed(2);
 									let localAmount = Math.abs(parseFloat(Big(transaction.local_amount || 0).div('100').valueOf())).toFixed(2);
 
 									let sign = transaction.amount <= 0 ? '-' : '';
 									let type = transaction.amount <= 0 ? 'transaction-list__cell--debit' : 'transaction-list__cell--credit';
-									let desc = transaction.merchant && transaction.merchant.name || transaction.description;
+									let desc = transaction.merchant && transaction.merchant.name || ''; //transaction.description;
 
 									return (
 										<tr className="transaction-list__row" key={transaction.id}>

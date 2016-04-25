@@ -10,9 +10,10 @@ export default function filters(state = initialState, action) {
 
       return {
         ...state,
-        [action.attribute]: {
+        [action.property]: {
           filter: action.filter,
           value: action.value,
+          filterType: action.filterType,
         }
       };
 
@@ -20,7 +21,7 @@ export default function filters(state = initialState, action) {
 
     case 'UNSET_FILTER_TYPE':
 
-      return _.omit(state, action.attribute);
+      return _.omit(state, action.property);
 
       break;
 

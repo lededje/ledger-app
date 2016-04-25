@@ -1,29 +1,22 @@
 // e.g amount, greater-than, 100
-// attribute is required, filter and value are optional.
+// property is required, filter, filterType and value are optional.
 
-export function setFilter (attribute, filter = undefined, value = undefined) {
+// If filter is defined then a filterType MUST be defined too. A value is always
+// optional. If the value is an empty string it will be IGNORED.
+
+export function setFilter (property, filter = undefined, filterType = undefined, value = undefined) {
 	return {
 		type: 'SET_FILTER_TYPE',
-		attribute,
+		property,
 		filter,
-		value
+		filterType,
+		value,
 	}
 }
 
-export function unsetFilter(attribute) {
+export function unsetFilter(property) {
 	return {
 		type: 'UNSET_FILTER_TYPE',
-		attribute
+		property
 	}
 }
-
-// {
-//   filters: {
-//     amount: {
-//       'greater-than':
-//     },
-//     created: {
-//       'more-than': true
-//     }
-//   }
-// }

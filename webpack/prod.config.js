@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
 
 module.exports = {
   devtool: 'source-map',
@@ -25,6 +26,7 @@ module.exports = {
     new ExtractTextPlugin('bundle.css'),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /de|fr|hu/),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false,
