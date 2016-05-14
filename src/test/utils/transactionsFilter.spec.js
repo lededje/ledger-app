@@ -70,8 +70,8 @@ describe('Transactions filters', () => {
       // The date is Sat May 15 2016 19:41:41 GMT+0100 (BST)
       // is a greater than b days ago?
 
-      expect(filters.greaterThan('2016-05-05T00:00:00Z', 10, 'date')).toEqual(true);
-      expect(filters.greaterThan('2016-05-16T00:00:00Z', 10, 'date')).toEqual(false);
+      expect(filters.greaterThan('2016-05-05T00:00:00Z', '10', 'date')).toEqual(true);
+      expect(filters.greaterThan('2016-05-16T00:00:00Z', '10', 'date')).toEqual(false);
 
       clock.uninstall();
 

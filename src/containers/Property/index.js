@@ -46,7 +46,7 @@ export default class Property extends Component {
 
     // TODO: Move this to the reducer.
     if(filterType === 'money' || filterType === 'number') {
-      value = parseInt(value, 10);
+      value = _.isNaN(parseInt(value, 10)) ? undefined : parseInt(value, 10);
     }
 
     this.props.setFilter(property, filter, filterType, value);

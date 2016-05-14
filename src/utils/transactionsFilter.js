@@ -14,11 +14,16 @@ export default function transactionsFilter(txs = [], actions) {
 
   if(txs.length === 0) return [];
 
-  if(Object.keys(actions).length === 0) return txs;
+  const cleanedActions = _(actions).clone().filter((action) => action.filter)
+
+  if(Object.keys(cleanedActions).length === 0) return txs;
+
 
   const filteredTx = _(txs).clone().filter((tx) => {
 
-    for(const id in actions) {
+    let passed = true;
+
+    for(const id in cleanedActions) {
 
       let action = actions[id];
 
@@ -26,43 +31,52 @@ export default function transactionsFilter(txs = [], actions) {
 
       switch(action.filter) {
         case 'less-than':
-          return filters.lessThan(_.get(tx, action.attribute), action.value, action.filterType)
+          if(!filters.lessThan(_.get(tx, action.attribute), action.value, action.filterType)) passed = false;
+          break;
+        case 'absolute-less-than':
+          if(!filters.absoluteLessThan(_.get(tx, action.attribute), action.value, action.filterType)) passed = false;
           break;
         case 'greater-than':
-          console.log(_.get(tx, action.attribute), action.value, action.filterType)
-          return filters.greaterThan(_.get(tx, action.attribute), action.value, action.filterType)
+          if(!filters.greaterThan(_.get(tx, action.attribute), action.value, action.filterType)) passed = false;
+          break;
+        case 'absolute-greater-than':
+          if(!filters.absoluteGreaterThan(_.get(tx, action.attribute), action.value, action.filterType)) passed = false;
+          break;
+        case 'relative-equal-to':
+          if(!filters.relativeEqualTo(_.get(tx, action.attribute), action.value, action.filterType)) passed = false;
           break;
         case 'equal-to':
-          return filters.equalTo(_.get(tx, action.attribute), action.value, action.filterType)
+          if(!filters.equalTo(_.get(tx, action.attribute), action.value, action.filterType)) passed = false;
           break;
         case 'not-equal-to':
-          return filters.notEqualTo(_.get(tx, action.attribute), action.value, action.filterType)
+          if(!filters.notEqualTo(_.get(tx, action.attribute), action.value, action.filterType)) passed = false;
           break;
         case 'is-true':
-          return filters.isTrue(_.get(tx, action.attribute), action.filterType)
+          if(!filters.isTrue(_.get(tx, action.attribute), action.filterType)) passed = false;
           break;
         case 'is-false':
-          return filters.isFalse(_.get(tx, action.attribute), action.filterType)
+          if(!filters.isFalse(_.get(tx, action.attribute), action.filterType)) passed = false;
           break;
         case 'begins-with':
-          return filters.beginsWith(_.get(tx, action.attribute), action.value, action.filterType)
+          if(!filters.beginsWith(_.get(tx, action.attribute), action.value, action.filterType)) passed = false;
           break;
         case 'ends-with':
-          return filters.endsWith(_.get(tx, action.attribute), action.value, action.filterType)
+          if(!filters.endsWith(_.get(tx, action.attribute), action.value, action.filterType)) passed = false;
           break;
         case 'contains':
-          return filters.contains(_.get(tx, action.attribute), action.value, action.filterType)
+          if(!filters.contains(_.get(tx, action.attribute), action.value, action.filterType)) passed = false;
           break;
         case 'is-set':
-          return filters.isSet(_.get(tx, action.attribute), action.value, action.filterType)
+          if(!filters.isSet(_.get(tx, action.attribute), action.value, action.filterType)) passed = false;
           break;
         case 'is-not-set':
-          return filters.isNotSet(_.get(tx, action.attribute), action.value, action.filterType)
+          if(!filters.isNotSet(_.get(tx, action.attribute), action.value, action.filterType)) passed = false;
           break;
       }
+
     }
 
-    return false;
+    return passed;
 
   });
 
@@ -89,15 +103,26 @@ export const filters = {
 
       case 'date':
 
-        if(!moment(a).isValid() || !_.isNumber(b)) {
+        if(!moment(a).isValid() || !_.isString(b) || _.isNaN(parseFloat(b, 10))) {
           return defaultReturn;
         }
 
         // For now lessThan /w a date is always relative and always in days.
 
-        return moment(a).endOf('day').isAfter(moment().subtract(b, 'days').startOf('day'));
+        return moment(a).endOf('day').isAfter(moment().subtract(parseFloat(b, 10), 'days').startOf('day'));
 
       default: return defaultReturn
+    }
+  },
+  absoluteLessThan: (a, b, type, defaultReturn = true) => {
+    switch(type) {
+      case 'date' :
+
+      if(!moment(a).isValid() || !moment(b).isValid) {
+        return defaultReturn;
+      }
+
+      return moment(a).isBefore(moment(b));
     }
   },
   greaterThan: (a, b, type, defaultReturn = true) => {
@@ -114,17 +139,38 @@ export const filters = {
 
       case 'date':
 
-        if(!moment(a).isValid() || !_.isNumber(b)) {
+        // The amount of days is passed in as a string; too much work to get that converted
+        // at a reducer level.
+        if(!moment(a).isValid() || !_.isString(b) || _.isNaN(parseFloat(b, 10))) {
           return defaultReturn;
         }
 
         // For now greaterThan /w a date is always relative and always in days.
-        return moment(a).endOf('day').isBefore(moment().subtract(b, 'days').startOf('day'));
+        return moment(a).endOf('day').isBefore(moment().subtract(parseFloat(b, 10), 'days').startOf('day'));
 
       default: return defaultReturn;
     }
 
     !_.isNumber(b) || a > b
+  },
+  absoluteGreaterThan: (a, b, type, defaultReturn = true) => {
+    switch(type) {
+      case 'date' :
+
+      if(!moment(a).isValid() || !moment(b).isValid) {
+        return defaultReturn;
+      }
+
+      return moment(a).isAfter(moment(b));
+    }
+  },
+  // Only used for relative dates
+  relativeEqualTo: (a, b, type, defaultReturn = true) => {
+    switch(type) {
+      case 'date':
+        return moment(a).startOf('day').isSame(moment().subtract(parseFloat(b, 10), 'days').startOf('day'));
+      default: return defaultReturn;
+    }
   },
   equalTo: (a, b, type, defaultReturn = true) => {
     switch(type) {

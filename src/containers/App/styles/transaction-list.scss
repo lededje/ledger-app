@@ -52,33 +52,6 @@
 		display: inline-block;
 	}
 
-	&__select-input {
-		display: none;
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translateY(-50%) translateX(-50%);
-
-		&:checked {
-			display: inline-block;
-		}
-
-		&:checked + .transaction-list__image,
-		&:checked + .transaction-list__no-image {
-			visibility: hidden;
-		}
-	}
-
-	&__row:hover {
-		.transaction-list__select-input {
-			display: inline-block;
-		}
-
-		.transaction-list__image, .transaction-list__no-image {
-			visibility: hidden;
-		}
-	}
-
 	&__hot-filter {
 		position: absolute;
 		top: 50%;

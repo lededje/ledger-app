@@ -88,12 +88,11 @@ export default class TransactionList extends Component {
 
 									let sign = transaction.amount <= 0 ? '-' : '';
 									let type = transaction.amount <= 0 ? 'transaction-list__cell--debit' : 'transaction-list__cell--credit';
-									let desc = transaction.merchant && transaction.merchant.name || ''; //transaction.description;
+									let desc = transaction.merchant && transaction.merchant.name || transaction.description;
 
 									return (
 										<tr className="transaction-list__row" key={transaction.id}>
 											<td className="transaction-list__cell transaction-list__cell--slim">
-												<input className="transaction-list__select-input" type="checkbox" />
 												{
 													transaction.merchant && transaction.merchant.logo && <img className="transaction-list__image" src={transaction.merchant.logo} height="20" width="20" />
 													||

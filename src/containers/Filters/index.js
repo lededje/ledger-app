@@ -20,12 +20,11 @@ export default class App extends Component {
 
           <ul className="filters__list">
             <Property name="amount" label="Amount" type="money" />
-            <Property name="created" label="Created" type="date" />
-            <Property name="currency" label="Currency" type="string" />
+            <Property name="updated" label="Date and Time" type="date" />
             <Property name="merchant.name" label="Merchant" type="string" />
-            <Property name="city" label="City" type="string" />
+            <Property name="merchant.address.formatted" label="Address" type="string" />
+            <Property name="merchant.address.city" label="City" type="string" />
             <Property name="category" label="Category" type="string" />
-            <Property name="settled" label="Settled" type="boolean" />
           </ul>
         </div>
       </div>

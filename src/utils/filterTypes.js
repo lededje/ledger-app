@@ -184,7 +184,7 @@ const types = {
     {
       component: FilterControl,
       label: 'more than',
-      name: 'more-than',
+      name: 'greater-than',
       input: {
         type: 'number',
         suffix: 'days ago'
@@ -193,7 +193,7 @@ const types = {
     {
       component: FilterControl,
       label: 'exactly',
-      name: 'exactly',
+      name: 'relative-equal-to',
       input: {
         type: 'number',
         suffix: 'days ago'
@@ -215,7 +215,7 @@ const types = {
     {
       component: FilterControl,
       label: 'after',
-      name: 'after',
+      name: 'absolute-greater-than',
       input: {
         type: 'date'
       }
@@ -223,7 +223,7 @@ const types = {
     {
       component: FilterControl,
       label: 'on',
-      name: 'on',
+      name: 'equal-to',
       input: {
         type: 'date'
       }
@@ -231,7 +231,7 @@ const types = {
     {
       component: FilterControl,
       label: 'before',
-      name: 'before',
+      name: 'absolute-less-than',
       input: {
         type: 'date'
       }
