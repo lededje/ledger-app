@@ -27,10 +27,13 @@ export default class TransactionList extends Component {
 
 		let target = e.target;
 
-		let attribute = target.dataset.attribute;
+		let {attribute, filter, filterType} = target.dataset;
+
 		let value = target.dataset.value;
 
-		this.props.setFilter(attribute, 'is', value);
+		console.log(value);
+
+		this.props.setFilter(attribute, filter, filterType, value);
 	}
 
 	render () {
@@ -101,19 +104,21 @@ export default class TransactionList extends Component {
 											</td>
 											<td className="transaction-list__cell transaction-list__cell--filterable">
 												{desc}
-												<span onClick={this.setFilter.bind(this)} className="transaction-list__hot-filter fa fa-filter" data-attribute="description" data-value={desc}></span>
+												<span onClick={this.setFilter.bind(this)} className="transaction-list__hot-filter fa fa-filter" data-attribute="merchant.name" data-filter="equal-to" data-filter-type="string" data-value={desc}></span>
 											</td>
 											<td className="transaction-list__cell transaction-list__cell--filterable">
-												{moment(transaction.updated).format('dddd Do MMMM \'YY')}
-												<span onClick={this.setFilter.bind(this)} className="transaction-list__hot-filter fa fa-filter"></span>
+												{moment(transaction.updated).format('ddd Do MMM \'YY')}
+												<span onClick={this.setFilter.bind(this)} className="transaction-list__hot-filter fa fa-filter" data-attribute="updated" data-filter="equal-to" data-filter-type="date" data-value={transaction.updated}></span>
 											</td>
 											<td className="transaction-list__cell transaction-list__cell--filterable">
 												{transaction.merchant && transaction.merchant.address && transaction.merchant.address.formatted}
-												<span onClick={this.setFilter.bind(this)} className="transaction-list__hot-filter fa fa-filter"></span>
+												{transaction.merchant && transaction.merchant.address &&
+													<span onClick={this.setFilter.bind(this)} className="transaction-list__hot-filter fa fa-filter" data-attribute="merchant.address.city" data-filter="equal-to" data-filter-type="string" data-value={transaction.merchant.address.city}></span>
+												}
 											</td>
 											<td className="transaction-list__cell transaction-list__cell--filterable" style={{textTransform: 'capitalize'}}>
 												{transaction.category.replace(/\_/g, ' ')}
-												<span onClick={this.setFilter.bind(this)} className="transaction-list__hot-filter fa fa-filter"></span>
+												<span onClick={this.setFilter.bind(this)} className="transaction-list__hot-filter fa fa-filter" data-attribute="category" data-filter="equal-to" data-filter-type="string" data-value={transaction.category}></span>
 											</td>
 											<td className={"transaction-list__cell " + type} style={{'textAlign': 'right'}}>
 												{sign}£{amount}
