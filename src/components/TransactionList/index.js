@@ -31,8 +31,6 @@ export default class TransactionList extends Component {
 
 		let value = target.dataset.value;
 
-		console.log(value);
-
 		this.props.setFilter(attribute, filter, filterType, value);
 	}
 

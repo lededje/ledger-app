@@ -18,7 +18,6 @@ export default function transactionsFilter(txs = [], actions) {
 
   if(Object.keys(cleanedActions).length === 0) return txs;
 
-
   const filteredTx = _(txs).clone().filter((tx) => {
 
     let passed = true;
