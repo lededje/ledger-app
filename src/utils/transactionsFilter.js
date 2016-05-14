@@ -3,6 +3,15 @@ import moment from 'moment';
 
 export default function transactionsFilter(txs = [], actions) {
 
+  // const filterActions = _(this.props.filters).map((filter, attribute) => {
+  // if(typeof filter.value === 'undefined') return;
+
+  // return {
+  // attribute,
+  // ...filter
+  // }
+  // }).filter((i) => typeof i !== 'undefined').value();
+
   if(txs.length === 0) return [];
 
   if(Object.keys(actions).length === 0) return txs;
@@ -13,14 +22,14 @@ export default function transactionsFilter(txs = [], actions) {
 
       let action = actions[id];
 
-      // Using _.get allows attributes to reference deep objects, for example
-      // merchant.name
+      // Using _.get allows attributes to reference deep objects, for example `merchant.name`
 
       switch(action.filter) {
         case 'less-than':
           return filters.lessThan(_.get(tx, action.attribute), action.value, action.filterType)
           break;
         case 'greater-than':
+          console.log(_.get(tx, action.attribute), action.value, action.filterType)
           return filters.greaterThan(_.get(tx, action.attribute), action.value, action.filterType)
           break;
         case 'equal-to':
@@ -66,13 +75,12 @@ export default function transactionsFilter(txs = [], actions) {
 
 
 export const filters = {
-  lessThan: (a, b, type, defaultReturn = false) => {
+  lessThan: (a, b, type, defaultReturn = true) => {
 
     switch(type) {
 
       case 'number':
       case 'money':
-
         if(!_.isNumber(a) || !_.isNumber(b)) {
           return defaultReturn;
         }
@@ -86,12 +94,13 @@ export const filters = {
         }
 
         // For now lessThan /w a date is always relative and always in days.
-        return moment(a).startOf('day').isBefore(moment().add(b, 'days').startOf('day'));
+
+        return moment(a).endOf('day').isAfter(moment().subtract(b, 'days').startOf('day'));
 
       default: return defaultReturn
     }
   },
-  greaterThan: (a, b, type, defaultReturn = false) => {
+  greaterThan: (a, b, type, defaultReturn = true) => {
 
     switch(type) {
       case 'number':
@@ -108,16 +117,16 @@ export const filters = {
         if(!moment(a).isValid() || !_.isNumber(b)) {
           return defaultReturn;
         }
+
         // For now greaterThan /w a date is always relative and always in days.
-        return moment(a).startOf('day').isAfter(moment(a).add(b, 'days').startOf('day'));
+        return moment(a).endOf('day').isBefore(moment().subtract(b, 'days').startOf('day'));
 
       default: return defaultReturn;
     }
 
     !_.isNumber(b) || a > b
   },
-  equalTo: (a, b, type, defaultReturn = false) => {
-
+  equalTo: (a, b, type, defaultReturn = true) => {
     switch(type) {
       case 'number':
       case 'money':
@@ -127,34 +136,41 @@ export const filters = {
         return moment(a).startOf('day').isSame(moment(b).startOf('day'));
       default: return defaultReturn;
     }
-    a === b
   },
-  notEqualTo: (a, b) => {
-    return !filters.equalTo.bind(this, arguments)
+  notEqualTo: (a, b, type, defaultReturn = true) => {
+    switch(type) {
+      case 'number':
+      case 'money':
+      case 'string':
+        return a !== b;
+      case 'date':
+        return !moment(a).startOf('day').isSame(moment(b).startOf('day'));
+      default: return defaultReturn;
+    }
   },
   isTrue: (a) => a === true,
   isFalse: (a) => a === false,
-  beginsWith: (a, b, defaultReturn = false) => {
-    if(_.isUndefined(a) || _.isUndefined(b)) {
+  beginsWith: (a, b, defaultReturn = true) => {
+    if(!_.isString(a) || !_.isString(b)) {
       return defaultReturn;
     }
 
     return a.toString() && a.toString().indexOf(b.toString()) === 0;
   },
-  endsWith: (a, b, defaultReturn = false) => {
+  endsWith: (a, b, defaultReturn = true) => {
     if(_.isUndefined(a) || _.isUndefined(b)) {
       return defaultReturn;
     }
 
-    return a.toString() && a.indexOf(b.toString()) === a.toString().length - b.toString().length;
+    return a && a.indexOf(b) === a.length - b.length;
   },
-  contains: (a, b, defaultReturn = false) => {
-    if(_.isUndefined(a) || _.isUndefined(b)) {
+  contains: (a, b, defaultReturn = true) => {
+    if(!_.isString(a) || !_.isString(b)) {
       return defaultReturn;
     }
 
-    return a.toString() && a.toString().indexOf(b.toString()) !== -1;
+    return a.indexOf(b) !== -1;
   },
-  isSet: (a) => typeof a === 'number' && a == 0 || !!a,
-  isNotSet: (a) => !filters.isSet.bind(this, arguments)
+  isSet: (a) => !_.isUndefined(a) && !_.isNull(a),
+  isNotSet: _.isUndefined
 }
