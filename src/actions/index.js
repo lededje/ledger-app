@@ -14,6 +14,16 @@ export function setFilter (property, filter = undefined, filterType = undefined,
 	}
 }
 
+export function setSortOrder(property, type, ascending = undefined) {
+
+	return {
+		type: 'SET_SORT_ORDER',
+		property,
+		sortType: type,
+		ascending
+	}
+}
+
 export function unsetFilter(property) {
 	return {
 		type: 'UNSET_FILTER_TYPE',

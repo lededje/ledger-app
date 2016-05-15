@@ -63,7 +63,7 @@ export default class Property extends Component {
     let propertyEnabled = _.has(this.props.filters, name);
 
     return (
-      <li className="property">
+      <li key={'property__' + name} className="property">
         <input name={name} id={'property__' + name} className="property__checkbox" type="checkbox" checked={propertyEnabled === true ? 'checked' : ''} onChange={this.onPropertyToggle.bind(this)} />
         <label htmlFor={'property__' + name} className="property__label">{label}</label>
         <div className={'property__controls ' + (propertyEnabled ? 'property__controls--show' : '')}>

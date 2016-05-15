@@ -27,10 +27,16 @@
 		padding: 0 10px;
 
 		&-label {
-			text-decoration: underline;
 			position: absolute;
 			top: 15px;
+
+			&--clickable {
+				text-decoration: underline;
+				cursor: pointer;
+			}
 		}
+
+
 		&-ghost {
 			visibility: hidden;
 			height: 0;

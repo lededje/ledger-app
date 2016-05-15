@@ -20,7 +20,7 @@ export default class App extends Component {
 
           <ul className="filters__list">
             <Property name="amount" label="Amount" type="money" />
-            <Property name="updated" label="Date and Time" type="date" />
+            <Property name="created" label="Date and Time" type="date" />
             <Property name="merchant.name" label="Merchant" type="string" />
             <Property name="merchant.address.formatted" label="Address" type="string" />
             <Property name="merchant.address.city" label="City" type="string" />
