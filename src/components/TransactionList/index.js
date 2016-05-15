@@ -81,7 +81,19 @@ export default class TransactionList extends Component {
       }, {
         label: 'Tags',
       }
-    ]
+    ].map((header) => {
+      if(header.sortAttribute === this.props.sorting.property) {
+        return {
+          ...header,
+          active: true,
+          ascending: this.props.sorting.ascending ? 'asc' : 'desc'
+        }
+      }
+
+      return header
+    });
+
+    console.log(headers);
 
     return (
       <div className="transaction-list flex">
@@ -95,14 +107,14 @@ export default class TransactionList extends Component {
                     return (
                       <th key={header.label} className="transaction-list__header">
                         <span
-                          className={'transaction-list__header-label' + (header.sortAttribute ? ' transaction-list__header-label--clickable': '')}
+                          className={'transaction-list__header-label' + (header.active ? ' transaction-list__header-label--order-' + header.ascending : '') + (header.sortAttribute ? ' transaction-list__header-label--clickable': '')}
                           data-sort-attribute={header.sortAttribute}
                           data-sort-type={header.sortType}
                           onClick={header.sortAttribute ? this.setSortBy.bind(this) : (() => {})}
                         >
                           {header.label}
                         </span>
-                        <span className="transaction-list__header-ghost">Merchant</span>
+                        <span className="transaction-list__header-ghost">{header.label}</span>
                       </th>
                     );
                   })

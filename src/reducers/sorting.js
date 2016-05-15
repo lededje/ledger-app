@@ -1,9 +1,9 @@
 import _ from 'lodash';
 
 const initialState = {
-  property: 'merchant.name',
-  type: 'string',
-  ascending: true
+  property: 'created',
+  type: 'date',
+  ascending: false
 };
 
 export default function sorting(state = initialState, action) {
@@ -16,7 +16,7 @@ export default function sorting(state = initialState, action) {
         ...state,
         property: action.property,
         type: action.sortType,
-        ascending: action.ascending || action.property === state.property ? !state.ascending : true
+        ascending: action.ascending || action.property === state.property ? !state.ascending : false
       }
 
     default:
