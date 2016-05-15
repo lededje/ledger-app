@@ -93,7 +93,6 @@ export default class TransactionList extends Component {
       return header
     });
 
-    console.log(headers);
 
     return (
       <div className="transaction-list flex">
