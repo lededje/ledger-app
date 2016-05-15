@@ -185,9 +185,13 @@ export const filters = {
   },
   equalTo: (a, b, type, defaultReturn = true) => {
     switch(type) {
+      case 'string':
+        if(!_.isString(a) || !_.isString(b)) {
+          return defaultReturn;
+        }
+        return a.toLowerCase().trim() === b.toLowerCase().trim()
       case 'number':
       case 'money':
-      case 'string':
         return a === b;
       case 'date':
         return moment(a).startOf('day').isSame(moment(b).startOf('day'));
@@ -212,21 +216,21 @@ export const filters = {
       return defaultReturn;
     }
 
-    return a.toString() && a.toString().indexOf(b.toString()) === 0;
+    return a.toString().toLowerCase().trim() && a.toString().toLowerCase().trim().indexOf(b.toString().toLowerCase().trim()) === 0;
   },
   endsWith: (a, b, defaultReturn = true) => {
     if(_.isUndefined(a) || _.isUndefined(b)) {
       return defaultReturn;
     }
 
-    return a && a.indexOf(b) === a.length - b.length;
+    return a.toLowerCase().trim().indexOf(b.toLowerCase().trim()) === a.toLowerCase().trim().length - b.toLowerCase().trim().length;
   },
   contains: (a, b, defaultReturn = true) => {
     if(!_.isString(a) || !_.isString(b)) {
       return defaultReturn;
     }
 
-    return a.indexOf(b) !== -1;
+    return a.toLowerCase().trim().indexOf(b.toLowerCase().trim()) !== -1;
   },
   isSet: (a) => !_.isUndefined(a) && !_.isNull(a),
   isNotSet: _.isUndefined
