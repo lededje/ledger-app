@@ -19,12 +19,12 @@ export default class App extends Component {
           <div className="filters__title">Tx Data</div>
 
           <ul className="filters__list">
-            <Property name="amount" label="Amount" type="money" />
-            <Property name="created" label="Date and Time" type="date" />
+            <Property name="_amount" label="Amount" type="money" />
             <Property name="_name" label="Description" type="string" />
+            <Property name="created" label="Date and Time" type="date" />
             <Property name="merchant.address.formatted" label="Address" type="string" />
             <Property name="merchant.address.city" label="City" type="string" />
-            <Property name="category" label="Category" type="string" />
+            <Property name="_category" label="Category" type="string" />
           </ul>
         </div>
       </div>

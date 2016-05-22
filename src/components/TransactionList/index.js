@@ -71,7 +71,7 @@ export default class TransactionList extends Component {
       },
       {
         label: 'Category',
-        sortAttribute: 'category',
+        sortAttribute: '_category',
         sortType: 'string'
       },
       {
@@ -154,8 +154,8 @@ export default class TransactionList extends Component {
                         }
                       </td>
                       <td className="transaction-list__cell transaction-list__cell--filterable" style={{textTransform: 'capitalize'}}>
-                        {transaction.category.replace(/\_/g, ' ')}
-                        <span onClick={this.setFilter.bind(this)} className="transaction-list__hot-filter fa fa-filter" data-attribute="category" data-filter="equal-to" data-filter-type="string" data-value={transaction.category}></span>
+                        {transaction._category}
+                        <span onClick={this.setFilter.bind(this)} className="transaction-list__hot-filter fa fa-filter" data-attribute="_category" data-filter="equal-to" data-filter-type="string" data-value={transaction._category}></span>
                       </td>
                       <td className={"transaction-list__cell " + type} style={{'textAlign': 'right'}}>
                         {sign}£{amount}

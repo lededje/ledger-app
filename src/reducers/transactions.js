@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import big from 'big.js';
 
 const initialState = {"transactions": []}
 
@@ -19,6 +20,13 @@ function cleanTx (tx) {
   return {
     ...tx,
     // lodash variables are private and should be stripped before exporting data.
-    _name: (!_.isNull(tx.merchant) ? tx.merchant.name : tx.description)
+
+    // The description is usually shite and the merchant is not always present
+    _name: (!_.isNull(tx.merchant) ? tx.merchant.name : tx.description),
+
+    // Rather than change how filtering numbers work store another record that contains the value in major currencies.
+    _amount: parseFloat(big(tx.amount || 0).div('100')),
+
+    _category: tx.category.replace(/\_/g, ' ')
   }
 }
