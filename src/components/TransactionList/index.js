@@ -57,8 +57,8 @@ export default class TransactionList extends Component {
 
     const headers = [
       {
-        label: 'Merchant',
-        sortAttribute: 'merchant.name',
+        label: 'Description',
+        sortAttribute: '_name',
         sortType: 'string'
       },
       {
@@ -129,7 +129,6 @@ export default class TransactionList extends Component {
 
                   let sign = transaction.amount <= 0 ? '-' : '';
                   let type = transaction.amount <= 0 ? 'transaction-list__cell--debit' : 'transaction-list__cell--credit';
-                  let desc = transaction.merchant && transaction.merchant.name || transaction.description;
 
                   return (
                     <tr className="transaction-list__row" key={transaction.id}>
@@ -137,12 +136,12 @@ export default class TransactionList extends Component {
                         {
                           transaction.merchant && transaction.merchant.logo && <img className="transaction-list__image" src={transaction.merchant.logo} height="20" width="20" />
                           ||
-                          <span className="transaction-list__no-image" style={{backgroundColor: intToMaterialColor(hashString(desc))}}>{desc.substr(0, 1).toUpperCase()}</span>
+                          <span className="transaction-list__no-image" style={{backgroundColor: intToMaterialColor(hashString(transaction._name))}}>{transaction._name.substr(0, 1).toUpperCase()}</span>
                         }
                       </td>
                       <td className="transaction-list__cell transaction-list__cell--filterable">
-                        {desc}
-                        <span onClick={this.setFilter.bind(this)} className="transaction-list__hot-filter fa fa-filter" data-attribute="merchant.name" data-filter="equal-to" data-filter-type="string" data-value={desc}></span>
+                        {transaction._name}
+                        <span onClick={this.setFilter.bind(this)} className="transaction-list__hot-filter fa fa-filter" data-attribute="_name" data-filter="equal-to" data-filter-type="string" data-value={transaction._name}></span>
                       </td>
                       <td className="transaction-list__cell transaction-list__cell--filterable">
                         {moment(transaction.created).format('ddd Do MMM \'YY')}

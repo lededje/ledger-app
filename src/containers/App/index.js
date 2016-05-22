@@ -19,6 +19,19 @@ import TransactionList from 'components/TransactionList'
 )
 
 export class App extends Component {
+
+  constructor (props) {
+    super(props)
+
+    fetch('/src/data/data.txt')
+      .then((res) => res.json())
+      .then((json) => json.transactions)
+      .then(props.setTransactions)
+      .catch(() => {
+        alert('Error loading tx.');
+      })
+  }
+
   static propTypes = {
     children: React.PropTypes.any,
   };

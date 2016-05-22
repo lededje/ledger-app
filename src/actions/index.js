@@ -30,3 +30,10 @@ export function unsetFilter(property) {
 		property
 	}
 }
+
+export function setTransactions(transactions = []) {
+	return {
+		type: 'SET_TRANSACTIONS',
+		transactions
+	}
+}
