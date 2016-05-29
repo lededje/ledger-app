@@ -3,11 +3,11 @@ import { Route, IndexRoute } from 'react-router';
 
 /* containers */
 import { App } from 'containers/App';
-import { Home } from 'containers/Home';
+import Transactions from 'containers/Transactions';
 
 export default (
   <Route path="/" component={App}>
-    <IndexRoute component={Home} />
-    <Route status={404} path="*" component={Home} />
+    <IndexRoute component={Transactions} />
+    <Route status={404} path="*" component={Transactions} />
   </Route>
 );
