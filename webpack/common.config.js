@@ -20,6 +20,7 @@ process.env.BABEL_ENV = TARGET;
 const common = {
   entry: [
     PATHS.app,
+    'whatwg-fetch'
   ],
 
   output: {

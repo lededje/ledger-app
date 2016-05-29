@@ -4,6 +4,11 @@ import { connect } from 'react-redux';
 
 import * as actions from 'actions/index';
 
+//
+// ga('send', 'event', 'transaction list', 'sorting', 'which category');
+// ga('send', 'event', 'filters', 'set filter', 'which value');
+// ga('send', 'event', 'love', 'clicked');
+
 import moment from 'moment'
 import Big from 'big.js'
 import hashString from 'utils/hashString';
@@ -28,12 +33,16 @@ export default class TransactionList extends Component {
     let {attribute, filter, filterType} = target.dataset;
     let value = target.dataset.value;
 
+    window.ga('send', 'event', 'transaction list', 'hot filter', attribute);
+
     this.props.setFilter(attribute, filter, filterType, value);
   }
 
   setSortBy (e) {
     let target = e.target;
     let {sortAttribute, sortType} = target.dataset;
+
+    window.ga('send', 'event', 'transaction list', 'sorting', sortAttribute);
 
     this.props.setSortOrder(sortAttribute, sortType);
 

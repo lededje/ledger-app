@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import * as actions from 'actions/index';
+import 'whatwg-fetch';
 
 /* global styles for app */
 import './styles/app.scss';

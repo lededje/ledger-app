@@ -20,6 +20,8 @@ export default class Property extends Component {
   onPropertyToggle (e) {
     let checked = e.target.checked;
 
+    window.ga('send', 'event', 'property', 'toggle', this.props.name);
+
     if(checked) {
       this.props.setFilter(this.props.name)
     } else {
@@ -44,10 +46,13 @@ export default class Property extends Component {
     let value = e.target.value;
     let filterType = e.target.dataset.type;
 
+
     // TODO: Move this to the reducer.
     if(filterType === 'money' || filterType === 'number') {
       value = _.isNaN(parseInt(value, 10)) ? undefined : parseInt(value, 10);
     }
+
+    window.ga('send', 'event', property, filter, value);
 
     this.props.setFilter(property, filter, filterType, value);
 
