@@ -17,7 +17,6 @@ import TransactionList from 'components/TransactionList'
   state => state.transactions,
   dispatch => bindActionCreators(actions, dispatch)
 )
-
 export class App extends Component {
 
   constructor (props) {
