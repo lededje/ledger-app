@@ -52,7 +52,7 @@ export default class Property extends Component {
       value = _.isNaN(parseInt(value, 10)) ? undefined : parseInt(value, 10);
     }
 
-    window.ga('send', 'event', property, filter, value);
+    window.ga('send', 'event', 'property', property, filter + ': ' + value);
 
     this.props.setFilter(property, filter, filterType, value);
 
