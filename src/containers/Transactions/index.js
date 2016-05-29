@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 
 import * as actions from 'actions/index';
 
-import Navigation from 'components/Navigation'
 import ContextualNavigation from 'components/ContextualNavigation'
 import ContextualTitle from 'components/ContextualTitle'
 import Filters from 'containers/Filters'
@@ -35,21 +34,18 @@ export default class Transactions extends Component {
 
   render() {
     return (
-      <section className="layout--horizontal flex">
-        <Navigation />
-        <div className="main layout--vertical flex" >
-          <ContextualNavigation/>
-          <div className="layout--horizontal flex">
-            <div className="contextual-side-navigation flex--static">
-              <Filters />
-            </div>
-            <div className="main-detail layout--vertical flex">
-              <ContextualTitle {...this.props} />
-              <TransactionList {...this.props} />
-            </div>
+      <div className="main layout--vertical flex">
+        <ContextualNavigation/>
+        <div className="layout--horizontal flex">
+          <div className="contextual-side-navigation flex--static">
+            <Filters />
+          </div>
+          <div className="main-detail layout--vertical flex">
+            <ContextualTitle {...this.props} />
+            <TransactionList {...this.props} />
           </div>
         </div>
-      </section>
+      </div>
     );
   }
 }
