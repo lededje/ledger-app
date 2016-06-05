@@ -11,7 +11,11 @@ import Filters from 'containers/Filters'
 import TransactionList from 'components/TransactionList'
 
 @connect(
-  state => state.transactions,
+  state => ({
+      transactions: state.transactions.transactions,
+      filters: state.filters,
+      sorting: state.sorting
+  }),
   dispatch => bindActionCreators(actions, dispatch)
 )
 

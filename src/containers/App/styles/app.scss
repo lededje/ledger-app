@@ -1,5 +1,9 @@
 /* global styles */
 
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 @import 'normalize';
 
 @import 'fonts/font-awesome';
