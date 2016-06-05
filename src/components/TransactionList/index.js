@@ -17,14 +17,7 @@ import getSymbol from 'currency-symbol-map'
 
 import _ from 'lodash';
 
-import transactionsFilter from 'utils/transactionsFilter';
-
-@connect(
-  state => {
-    return {filters: state.filters, sorting: state.sorting}
-  },
-  dispatch => bindActionCreators(actions, dispatch)
-)
+import filterHelper from 'utils/filterHelper';
 
 export default class TransactionList extends Component {
 
@@ -50,19 +43,7 @@ export default class TransactionList extends Component {
 
   render () {
 
-    let {transactions} = this.props;
-
-    const filterActions = _.map(this.props.filters, (filter, attribute) => {
-      return {
-        attribute,
-        ...filter
-      }
-    });
-
-    const sortingOptions = this.props.sorting
-
-    const filteredTx = transactionsFilter(transactions, filterActions, sortingOptions);
-
+    const filteredTx = filterHelper(this.props.transactions, this.props.filters, this.props.sorting);
 
     const headers = [
       {

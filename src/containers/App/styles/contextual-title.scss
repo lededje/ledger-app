@@ -1,8 +1,30 @@
 .contextual-title {
-	font-size: 18px;
-	color: #37474F;
-	font-weight: bold;
-	background: #F8FAFB;
-	padding: 15px 20px;
-	border-bottom: 1px solid #DCE5EB;
+  font-size: 18px;
+  color: #37474F;
+  font-weight: bold;
+  background: #F8FAFB;
+  padding: 15px 20px;
+  border-bottom: 1px solid #DCE5EB;
+  display: flex;
+  align-items: center;
+
+  &__title {
+    flex: 1;
+      display: flex;
+  }
+
+  &__text-link {
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: inherit;
+    padding: 3px;
+    color: #6E8593;
+    transition: color 250ms;
+
+    &:hover {
+      color: #37474F;
+    }
+  }
 }
