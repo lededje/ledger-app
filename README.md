@@ -1,6 +1,8 @@
 Redux Easy Boilerplate
 =========================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/lededje/ledger-app.svg?token=05244fe0ab4a777197dcf86db3c19d9654d9abcf6466612f74475633ef61887b)](https://greenkeeper.io/)
+
 ![http://anorudes.github.io/redux-easy-boilerplate/](https://raw.githubusercontent.com/anorudes/redux-easy-boilerplate/569905d1aabc33ce385b1895984141764d364b54/gh/browser.png)
 
 ## Table of Contents
